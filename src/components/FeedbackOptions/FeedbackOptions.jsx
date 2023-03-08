@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import { nanoid } from 'nanoid';
 import { Section } from '../Layout';
 import { List, Item, Button } from './FeedbackOptions.styled';
 
-const FeedbackOptions = ({ onLeaveFeedback }) => {
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     return (
         <Section title="feedbackOptions">
             <h2>
@@ -10,15 +11,12 @@ const FeedbackOptions = ({ onLeaveFeedback }) => {
             </h2>
 
             <List>
-                <Item>
-                    <Button type="button" onClick={onLeaveFeedback}>Good</Button>
-                </Item>
-                <Item>
-                    <Button type="button" onClick={onLeaveFeedback}>Neutral</Button>
-                </Item>
-                <Item>
-                    <Button type="button" onClick={onLeaveFeedback}>Bad</Button>
-                </Item>
+                {options.map(option => {
+                    return (
+                        <Item key={nanoid()}>
+                            <Button type="button" onClick={onLeaveFeedback}>{option}</Button>
+                        </Item>
+                )})}
             </List>
         </Section>
     );

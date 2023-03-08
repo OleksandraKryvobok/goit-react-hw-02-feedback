@@ -39,10 +39,11 @@ export class App extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
+    const keys = Object.keys(this.state);
 
     return (
       <Layout>
-        <FeedbackOptions onLeaveFeedback={this.onLeaveFeedback}></FeedbackOptions>
+        <FeedbackOptions options={keys} onLeaveFeedback={this.onLeaveFeedback}></FeedbackOptions>
         <Statistics good={good} neutral={neutral} bad={bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage()}></Statistics>
       </Layout>
     );

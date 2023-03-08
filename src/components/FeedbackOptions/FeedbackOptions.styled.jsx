@@ -12,6 +12,7 @@ export const Item = styled.li`
 export const Button = styled.button`
     padding: 4px 8px;
     font-size: 12px;
+    text-transform: capitalize;
     background-color: #ffffff;
     border: 1px solid #7c7b7b;
     border-radius: 6px;
