@@ -9,7 +9,3 @@ export const Layout = styled.div`
         margin: 0;
     }
 `;
-
-export const Section = styled.section`
-    
-`;

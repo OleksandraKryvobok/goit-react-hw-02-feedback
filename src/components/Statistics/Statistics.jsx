@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
-import { Section } from '../Layout';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
     return (
-        <Section title="statistics">
+        <section title="statistics">
             <h2>Statistics</h2>
             
             {total === 0 ? (
@@ -26,7 +25,7 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
                         Positive feedback: {positivePercentage}%
                     </li>
                 </ul>)}
-        </Section>
+        </section>
     );
 };
 

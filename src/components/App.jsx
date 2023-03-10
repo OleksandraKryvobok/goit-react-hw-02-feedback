@@ -1,8 +1,7 @@
 import { Component } from "react";
-import PropTypes from 'prop-types';
-import { Layout } from "./Layout";
 import FeedbackOptions from "./FeedbackOptions";
 import Statistics from "./Statistics";
+import { Layout } from "./Layout";
 
 export class App extends Component {
   state = {

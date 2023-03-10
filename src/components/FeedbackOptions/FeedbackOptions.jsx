@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
-import { Section } from '../Layout';
 import { List, Item, Button } from './FeedbackOptions.styled';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     return (
-        <Section title="feedbackOptions">
+        <section title="feedbackOptions">
             <h2>
                 Please leave feedback
             </h2>
@@ -18,7 +17,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
                         </Item>
                 )})}
             </List>
-        </Section>
+        </section>
     );
 };
 
